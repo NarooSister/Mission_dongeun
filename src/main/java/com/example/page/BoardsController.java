@@ -15,7 +15,7 @@ public class BoardsController {
     @GetMapping
     public String boards(Model model){
         model.addAttribute("boards", boardsService.readAll());
-        return "boards";
+        return "boards/home";
     }
     @GetMapping("{id}")
     public String boardsOne(
@@ -26,8 +26,6 @@ public class BoardsController {
         model.addAttribute("boards", boardsService.readOne(id));
         return "boards/read";
     }
-
-
 
 }
 
