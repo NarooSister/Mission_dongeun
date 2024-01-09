@@ -18,8 +18,10 @@
     </thead>
     <tbody>
     <tr th:each="boards: ${boards}">
-        <td th:text="${boards.name}"></td>
-        <td th:text="${boards.information}"></td>
+        <th scope="col">
+        <a th:href="@{/boards/{boardsId}(id=${boards.id})}" th:text="${boards.name}"></a>
+        </th>
+        <th scope="col" th:text="${boards.information}"></th>
     </tr>
     </tbody>
 </table>

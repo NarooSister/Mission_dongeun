@@ -17,15 +17,15 @@ public class BoardsController {
         model.addAttribute("boards", boardsService.readAll());
         return "boards/home";
     }
-//    @GetMapping("{id}")
-//    public String boardsOne(
-//            @PathVariable("id")
-//            Long id,
-//            Model model)
-//    {
-//        model.addAttribute("boards", boardsService.readOne(id));
-//        return "boards/read";
-//    }
+    @GetMapping("{id}")
+    public String boardsOne(
+            @PathVariable("id")
+            Long id,
+            Model model)
+    {
+        model.addAttribute("boards", boardsService.readOne(id));
+        return "boards/read";
+    }
 
 }
 

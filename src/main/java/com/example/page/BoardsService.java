@@ -22,9 +22,9 @@ public class BoardsService {
         }
         return boardsList;
     }
-//    public BoardsDto readOne(Long id){
-//        Boards boards = repository.findById(id).orElseThrow();
-//        return BoardsDto.fromEntity(boards);
-//    }
+    public BoardsDto readOne(Long id){
+        Boards boards = repository.findById(id).orElseThrow();
+        return BoardsDto.fromEntity(boards);
+    }
 
 }
