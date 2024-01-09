@@ -13,9 +13,11 @@ import java.util.List;
 public class BoardsDto {
     private Long id;
     private String name;
+    private String information;
     private List<ArticleDto> articles = new ArrayList<>();
-    public BoardsDto(String name){
+    public BoardsDto(String name, String information){
         this.name = name;
+        this.information = information;
     }
 
     //static factory method
@@ -23,6 +25,7 @@ public class BoardsDto {
         BoardsDto dto = new BoardsDto();
         dto.id = entity.getId();
         dto.name = entity.getName();
+        dto.information = entity.getInformation();
         dto.articles = new ArrayList<>();
         for(Article article: entity.getArticles())
             dto.articles.add(ArticleDto.fromEntity(article));

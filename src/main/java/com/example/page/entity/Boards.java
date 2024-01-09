@@ -14,11 +14,13 @@ public class Boards {
     private Long id;
 
     private String name;
+    private String information;
     @OneToMany(mappedBy = "boards")
     private final List<Article> articles = new ArrayList<>();
 
     public Boards(){}
-    public Boards(String name){
+    public Boards(String name, String information){
         this.name = name;
+        this.information = information;
     }
 }
